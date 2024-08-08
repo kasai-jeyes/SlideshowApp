@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780372622C647050008D8258 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780372612C647050008D8258 /* ResultViewController.swift */; };
+		780372742C6488B6008D8258 /* gazo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7803726F2C6488B6008D8258 /* gazo2.jpg */; };
+		780372752C6488B6008D8258 /* gazo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780372702C6488B6008D8258 /* gazo3.jpg */; };
+		780372762C6488B6008D8258 /* gazo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780372712C6488B6008D8258 /* gazo5.jpg */; };
+		780372772C6488B6008D8258 /* gazo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780372722C6488B6008D8258 /* gazo1.jpg */; };
+		780372782C6488B6008D8258 /* gazo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 780372732C6488B6008D8258 /* gazo4.jpg */; };
 		78D9FFCE2C60BE48002FBD41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FFCD2C60BE48002FBD41 /* AppDelegate.swift */; };
 		78D9FFD02C60BE48002FBD41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FFCF2C60BE48002FBD41 /* SceneDelegate.swift */; };
 		78D9FFD22C60BE48002FBD41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FFD12C60BE48002FBD41 /* ViewController.swift */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780372612C647050008D8258 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		7803726F2C6488B6008D8258 /* gazo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gazo2.jpg; sourceTree = "<group>"; };
+		780372702C6488B6008D8258 /* gazo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gazo3.jpg; sourceTree = "<group>"; };
+		780372712C6488B6008D8258 /* gazo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gazo5.jpg; sourceTree = "<group>"; };
+		780372722C6488B6008D8258 /* gazo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gazo1.jpg; sourceTree = "<group>"; };
+		780372732C6488B6008D8258 /* gazo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gazo4.jpg; sourceTree = "<group>"; };
 		78D9FFCA2C60BE48002FBD41 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D9FFCD2C60BE48002FBD41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D9FFCF2C60BE48002FBD41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +71,15 @@
 				78D9FFCD2C60BE48002FBD41 /* AppDelegate.swift */,
 				78D9FFCF2C60BE48002FBD41 /* SceneDelegate.swift */,
 				78D9FFD12C60BE48002FBD41 /* ViewController.swift */,
+				780372612C647050008D8258 /* ResultViewController.swift */,
 				78D9FFD32C60BE48002FBD41 /* Main.storyboard */,
 				78D9FFD62C60BE4A002FBD41 /* Assets.xcassets */,
 				78D9FFD82C60BE4A002FBD41 /* LaunchScreen.storyboard */,
+				780372722C6488B6008D8258 /* gazo1.jpg */,
+				7803726F2C6488B6008D8258 /* gazo2.jpg */,
+				780372702C6488B6008D8258 /* gazo3.jpg */,
+				780372732C6488B6008D8258 /* gazo4.jpg */,
+				780372712C6488B6008D8258 /* gazo5.jpg */,
 				78D9FFDB2C60BE4A002FBD41 /* Info.plist */,
 			);
 			path = SlideshowApp;
@@ -126,8 +144,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D9FFDA2C60BE4A002FBD41 /* LaunchScreen.storyboard in Resources */,
+				780372772C6488B6008D8258 /* gazo1.jpg in Resources */,
+				780372752C6488B6008D8258 /* gazo3.jpg in Resources */,
 				78D9FFD72C60BE4A002FBD41 /* Assets.xcassets in Resources */,
 				78D9FFD52C60BE48002FBD41 /* Main.storyboard in Resources */,
+				780372782C6488B6008D8258 /* gazo4.jpg in Resources */,
+				780372762C6488B6008D8258 /* gazo5.jpg in Resources */,
+				780372742C6488B6008D8258 /* gazo2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +164,7 @@
 				78D9FFD22C60BE48002FBD41 /* ViewController.swift in Sources */,
 				78D9FFCE2C60BE48002FBD41 /* AppDelegate.swift in Sources */,
 				78D9FFD02C60BE48002FBD41 /* SceneDelegate.swift in Sources */,
+				780372622C647050008D8258 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
