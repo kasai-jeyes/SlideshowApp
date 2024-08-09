@@ -101,14 +101,32 @@ class ViewController: UIViewController {
         }
     }
     
+    // 次の画面へ遷移
     @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
-        self.performSegue(withIdentifier: "toResultView", sender: self)
+        if ( timer != nil ) {
+            self.performSegue(withIdentifier: "toResultView", sender: self)
+            // タイマーを停止する
+            timer.invalidate()
+            
+            // タイマーを削除しておく（timer.invalidateだけだとtimerがnilにならないため）
+            timer = nil
+            
+            // ボタンの名前を再生に直しておく
+            startButton.setTitle("再生", for: .normal)
+            
+            // 進むボタンと戻るボタンを有効化
+            susumuButton.isEnabled = true
+            modoruButton.isEnabled = true
+            
+        } else {
+            self.performSegue(withIdentifier: "toResultView", sender: self)
+        }
     }
     
     @objc func changeImage() {
         // indexを増やして表示する画像を切り替える
         nowIndex += 1
-
+        
         // indexが表示予定の画像の数と同じ場合
         if (nowIndex == imageArray.count) {
             // indexを一番最初の数字に戻す
@@ -121,11 +139,11 @@ class ViewController: UIViewController {
     @objc func backImage() {
         // indexを減らして表示する画像を切り替える
         nowIndex -= 1
-
+        
         // indexが最初の数字になったら
-        if (nowIndex == 0) {
+        if (nowIndex < 0) {
             // indexを一番最後の数字に戻す
-            nowIndex = imageArray.count
+            nowIndex = imageArray.count - 1
         }
         // indexの画像をstoryboardの画像にセットする
         imageView.image = imageArray[nowIndex]
@@ -133,8 +151,5 @@ class ViewController: UIViewController {
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
-    
-    
-
 }
 
