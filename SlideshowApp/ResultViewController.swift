@@ -8,13 +8,16 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    @IBOutlet weak var biggerImage: UIImageView!
     
-
+    var img: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        biggerImage.image = img
     }
     
 

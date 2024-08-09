@@ -45,6 +45,15 @@ class ViewController: UIViewController {
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController : ResultViewController = segue.destination as! ResultViewController
+        //遷移先のResultViewControllerで宣言しているimgに値を代入して渡す。
+        resultViewController.img = imageArray[nowIndex]
+    }
+    
+    
+    
     @IBAction func nextButton(_ sender: Any) {
         if (timer == nil) {
             // 次の画像へ
