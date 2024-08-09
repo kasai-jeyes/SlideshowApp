@@ -30,9 +30,19 @@ class ViewController: UIViewController {
         UIImage(named: "gazo5.jpg")!
     ]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // indexの画像をstoryboardの画像にセットする
+        imageView.image = imageArray[nowIndex]
+        
+        // タップアクションの有効化
+        imageView.isUserInteractionEnabled = true
+        
+        // imageViewにタップアクションを追加と呼び出すメソッドの追加
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
     }
     
     @IBAction func nextButton(_ sender: Any) {
@@ -44,7 +54,7 @@ class ViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         if (timer == nil) {
-            // 次の画像へ
+            // 前の画像へ
             backImage()
         }
     }
@@ -82,6 +92,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "toResultView", sender: self)
+    }
+    
     @objc func changeImage() {
         // indexを増やして表示する画像を切り替える
         nowIndex += 1
@@ -107,6 +121,10 @@ class ViewController: UIViewController {
         // indexの画像をstoryboardの画像にセットする
         imageView.image = imageArray[nowIndex]
     }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
     
 
 }

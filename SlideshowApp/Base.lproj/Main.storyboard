@@ -56,6 +56,7 @@
                         <outlet property="modoruButton" destination="TPm-7b-UKr" id="fdy-ot-XnO"/>
                         <outlet property="startButton" destination="VX8-AC-CPR" id="m1v-2O-gR3"/>
                         <outlet property="susumuButton" destination="LTv-Hm-x08" id="pHT-S9-Uk1"/>
+                        <segue destination="gpr-FK-cEF" kind="show" identifier="toResultView" id="vxT-k2-pzI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,14 +68,17 @@
             <objects>
                 <viewController id="gpr-FK-cEF" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="35P-SS-y4B">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-kQ-qe6">
-                                <rect key="frame" x="159" y="525" width="75" height="35"/>
+                                <rect key="frame" x="169" y="525" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <connections>
+                                    <segue destination="cnm-fQ-czZ" kind="unwind" unwindAction="unwind:" id="pe4-4b-JFO"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-MT-EUQ">
                                 <rect key="frame" x="16" y="194" width="361" height="275"/>
@@ -84,11 +88,10 @@
                         <viewLayoutGuide key="safeArea" id="hbq-03-pOZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="biggerImage" destination="Y8g-MT-EUQ" id="qvK-cH-NUP"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="lAr-pj-PHf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvR-OY-WmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cnm-fQ-czZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="846.56488549618314" y="-27.464788732394368"/>
         </scene>

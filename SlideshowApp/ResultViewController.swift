@@ -9,7 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet weak var biggerImageView : UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
