@@ -16,40 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-Hm-x08">
-                                <rect key="frame" x="62" y="409" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="進む"/>
-                                <connections>
-                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enP-qC-FbW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-7b-UKr">
-                                <rect key="frame" x="161" y="409" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
-                                <connections>
-                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bcb-b1-5Ke"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX8-AC-CPR">
-                                <rect key="frame" x="259" y="408" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="再生"/>
-                                <connections>
-                                    <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygs-c4-Fz0"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8u1-81-g8o">
-                                <rect key="frame" x="68" y="200" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Z3-YH-PBv">
+                                <rect key="frame" x="90.666666666666686" y="583.66666666666663" width="212" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-Hm-x08">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="進む"/>
+                                        <connections>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enP-qC-FbW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-7b-UKr">
+                                        <rect key="frame" x="77.999999999999986" y="0.0" width="56.000000000000014" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bcb-b1-5Ke"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX8-AC-CPR">
+                                        <rect key="frame" x="156" y="0.0" width="56" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="再生"/>
+                                        <connections>
+                                            <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygs-c4-Fz0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8u1-81-g8o">
+                                <rect key="frame" x="70" y="159.00000000000003" width="253" height="394.66666666666674"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Z3-YH-PBv" firstAttribute="top" secondItem="8u1-81-g8o" secondAttribute="bottom" constant="30" id="C9o-KN-RRG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Z3-YH-PBv" secondAttribute="bottom" constant="200" id="K6u-e1-DUD"/>
+                            <constraint firstItem="8u1-81-g8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="OSh-pX-JJ9"/>
+                            <constraint firstItem="8u1-81-g8o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dDW-Uu-qGU"/>
+                            <constraint firstItem="2Z3-YH-PBv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="leQ-wZ-Pm6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8u1-81-g8o" secondAttribute="trailing" constant="70" id="uwD-Nf-aHg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="8u1-81-g8o" id="hYS-Ji-7s3"/>
@@ -61,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-27"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="52P-w6-aTN">
@@ -71,22 +80,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-kQ-qe6">
-                                <rect key="frame" x="169" y="525" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-kQ-qe6">
+                                <rect key="frame" x="168.66666666666666" y="607" width="56" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
                                     <segue destination="cnm-fQ-czZ" kind="unwind" unwindAction="unwind:" id="pe4-4b-JFO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-MT-EUQ">
-                                <rect key="frame" x="16" y="194" width="361" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8g-MT-EUQ">
+                                <rect key="frame" x="0.0" y="100" width="393" height="477"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hbq-03-pOZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y8g-MT-EUQ" firstAttribute="trailing" secondItem="hbq-03-pOZ" secondAttribute="trailing" id="0LF-rL-KN0"/>
+                            <constraint firstItem="eti-kQ-qe6" firstAttribute="centerX" secondItem="35P-SS-y4B" secondAttribute="centerX" id="IXe-TP-C5X"/>
+                            <constraint firstItem="Y8g-MT-EUQ" firstAttribute="leading" secondItem="hbq-03-pOZ" secondAttribute="leading" id="aiZ-TJ-zZD"/>
+                            <constraint firstItem="Y8g-MT-EUQ" firstAttribute="top" secondItem="hbq-03-pOZ" secondAttribute="top" constant="100" id="gRH-iP-bcU"/>
+                            <constraint firstItem="eti-kQ-qe6" firstAttribute="top" secondItem="Y8g-MT-EUQ" secondAttribute="bottom" constant="30" id="ibB-qr-Zve"/>
+                            <constraint firstItem="hbq-03-pOZ" firstAttribute="bottom" secondItem="eti-kQ-qe6" secondAttribute="bottom" constant="200" id="k08-Sf-sYz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lAr-pj-PHf"/>
                     <connections>
